@@ -61,7 +61,7 @@ export default {}
   position: relative;
   align-items: center;
   justify-content: center;
-  background: var(--text-color-lg);
+  background: var(--bg-black);
   width: 2.125em;
   height: 2.125em;
   border-radius: 1.0625em;
@@ -152,7 +152,7 @@ export default {}
 .popup-window ul button:hover,
 .popup-window ul button:focus-visible{
   color: #fff;
-  background: var(--text-color-lg);
+  background: var(--bg-black);
 }
 
 .popup-window ul button:hover span {
@@ -167,7 +167,7 @@ export default {}
 }
 
 .burger:focus:not(:hover) {
-  outline-color: var(--text-color-lg);
+  outline-color: var(--black);
   outline-offset: 0.2em;
 }
 

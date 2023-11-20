@@ -228,7 +228,7 @@ table {
   border-collapse: collapse;
   overflow: hidden;
   border-radius: 0em;
-  outline: 3px solid var(--text-color-lg);
+  outline: 3px solid var(--black);
 }
 .content {
   margin-top: 3em;
@@ -240,9 +240,9 @@ table {
 thead tr th {
   padding: 1.5em 1em;
   border: 0;
-  border: 2px solid var(--text-color-lg);
+  border: 2px solid var(--black);
   color: white;
-  background-color: var(--text-color-lg);
+  background-color: var(--bg-black);
 }
 span {
   color: white;
@@ -250,7 +250,7 @@ span {
 .table-hidden {
   overflow: hidden;
   border: 3px solid;
-  border-radius: 2em;
+  border-radius: var(--border-rds);
 }
 .table-wrapper {
   overflow-x: auto;

@@ -1,8 +1,12 @@
 :root {
-    --primary-color-lg: #3F4D83;
+    --primary-color-lg: var(--black);
     --primary-color-dk: #ff9c08;
     --text-color-lg: #363636;
     --text-color-dk: #f2f2f2;
     --bg-dark: #222;
+    --gray: ;
+    --border-rds: 1em;
+    --black: #363636;
+    --bg-black: #363636;
     --bg-light: #ffffff;
 }  

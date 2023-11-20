@@ -62,7 +62,7 @@ import InputButtonBorder from './input/pesquisa/InputButtonBorder.vue'
 
 <style scoped>
 nav {
-  background-color: var(--text-color-lg);
+  background-color: var(--black);
   height: 73px;
   padding: 40px 145px;
   width: -webkit-fill-available;

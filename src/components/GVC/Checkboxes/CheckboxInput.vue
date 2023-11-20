@@ -25,13 +25,13 @@ export default {}
   border-radius: 10px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0px 0px 0px 3px var(--text-color-lg);
+  box-shadow: 0px 0px 0px 3px var(--black);
 }
 
 .checkBox div {
   width: 60px;
   height: 60px;
-  background-color: var(--text-color-lg);
+  background-color: var(--bg-black);
   top: -52px;
   left: -52px;
   position: absolute;

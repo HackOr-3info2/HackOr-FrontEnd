@@ -26,9 +26,10 @@ export default {
 .loader__circle {
   width: 14px;
   height: 14px;
-  border-radius: 50%;
+    border-radius: var(--border-rds);
+
   margin: 0 4px;
-  background-color: var(--text-color-lg);
+  background-color: var(--black);
   animation: loader_901 1s ease-in-out infinite;
 }
 

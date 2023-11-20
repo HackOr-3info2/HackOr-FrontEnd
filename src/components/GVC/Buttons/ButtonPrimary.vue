@@ -19,10 +19,11 @@ button {
   padding: 0.7em 2em;
   position: relative;
   overflow: hidden;
-  border: 3px solid var(--text-color-lg);
+  border: 3px solid var(--black);
   transition: color 0.2s;
   z-index: 1;
-  border-radius: 25px;
+    border-radius: var(--border-rds);
+
   cursor: pointer;
   background-color: #fff;
   font-weight: 500;
@@ -33,10 +34,11 @@ button:before {
   content: '';
   position: absolute;
   z-index: -1;
-  background: var(--text-color-lg);
+  background: var(--bg-black);
   height: 150px;
   width: 200px;
-  border-radius: 50%;
+    border-radius: var(--border-rds);
+
 }
 
 button:hover {
@@ -55,7 +57,7 @@ button:hover:before {
 }
 
 button:active:before {
-  background: var(--text-color-lg);
+  background: var(--bg-black);
   transition: background 0s;
 }
 </style>

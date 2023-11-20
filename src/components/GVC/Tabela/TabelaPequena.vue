@@ -103,8 +103,8 @@ table {
   border-collapse: collapse;
   margin-top: 20px;
   overflow: hidden;
-  border-radius: 2em;
-  outline: 3px solid var(--text-color-lg);
+  border-radius: var(--border-rds);
+  outline: 3px solid var(--black);
 }
 .content {
   margin-top: 3em
@@ -116,9 +116,9 @@ table {
 thead tr th {
   padding: 1.5em 1em;
   border: 0;
-  border: 2px solid var(--text-color-lg);
+  border: 2px solid var(--black);
   color: white;
-  background-color: var(--text-color-lg);
+  background-color: var(--bg-black);
 }
 span {
   color: white;

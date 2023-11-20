@@ -22,7 +22,7 @@ export default {}
   outline: none;
   border: 2px solid rgb(200, 200, 200);
   background-color: transparent;
-  border-radius: 160px;
+  border-radius: var(--border-rds);
   width: 100%;
 }
 
@@ -45,6 +45,6 @@ export default {}
 }
 
 .inputGroup :is(input:focus, input:valid) {
-  border-color: var(--text-color-lg);
+  border-color: var(--black);
 }
 </style>

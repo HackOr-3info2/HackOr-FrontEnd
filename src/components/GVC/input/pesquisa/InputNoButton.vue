@@ -40,8 +40,8 @@ export default {}
   flex-direction: row-reverse;
   align-items: center;
   justify-content: center;
-  border-radius: 160px;
-  background-color: var(--text-color-lg);
+  border-radius: var(--border-rds);
+  background-color: var(--bg-black);
   transition: all 0.3s ease;
 }
 

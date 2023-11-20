@@ -58,12 +58,12 @@ ul {
   padding: 0;
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--text-color-lg);
+  background-color: var(--bg-black);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 0.75rem;
-  border-radius: 2em;
+  border-radius: var(--border-rds);
 }
 
 li:nth-child(6) {
@@ -84,7 +84,7 @@ a {
   justify-content: center;
   width: 3rem;
   height: 3rem;
-  border-radius: 1.5em;
+  border-radius: var(--border-rds);
   position: relative;
 }
 
@@ -112,9 +112,9 @@ a span {
   white-space: nowrap;
   color: var(--text-color-lg);
   font-size: .8em;
-  border: 3px solid var(--text-color-lg);
+  border: 3px solid var(--black);
   padding: 0.5rem 1rem;
-  border-radius: 1em;
+  border-radius: var(--border-rds);
   left: calc(100% + 1.5rem);
   transform-origin: center left;
   transform: scale(0);

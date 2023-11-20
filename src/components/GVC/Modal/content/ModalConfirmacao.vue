@@ -78,7 +78,7 @@ p {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  border: 3px solid var(--text-color-lg);
+  border: 3px solid var(--black);
   padding: 2em;
   overflow-y: hidden;
   display: flex;

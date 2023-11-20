@@ -17,7 +17,7 @@ import ButtonSecondaryNo from '../../GVC/Buttons/ButtonSecondaryNo.vue'
       </div>
     </div>
     <div>
-      <img src="../../../assets/team-up.svg" alt="" />
+<!--       <img src="../../../assets/team-up.svg" alt="" /> -->
     </div>
   </section>
 </template>
@@ -28,10 +28,12 @@ section {
   align-items: center;
   padding: 2em;
   margin: 3em 5em 0 5em;
+  position: absolute;
   border-top-left-radius: 2em;
   height: 80vh;
   border-top-right-radius: 2em;
-  border: 4px solid var(--text-color-lg);
+  border: 4px solid var(--black);
+  bottom: 0;
 }
 .content {
   width: 50%;
@@ -41,6 +43,7 @@ section {
   display: flex;
   gap: 1em;
   width: fit-content;
+  margin-top: 5em
 }
 img {
   width: 30em;

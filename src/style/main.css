@@ -14,8 +14,8 @@
   width: 8px;
 }
 ::-webkit-scrollbar-thumb {
-  border-radius: 1em;
-  background: var(--text-color-lg);
+  border-radius: var(--border-rds);
+  background: var(--bg-black);
 }
 
 h1,

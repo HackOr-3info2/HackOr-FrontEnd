@@ -19,10 +19,11 @@ button {
   padding: 0.7em 2em;
   position: relative;
   overflow: hidden;
-  border: 3px solid var(--text-color-lg);
+  border: 3px solid var(--black);
   transition: transform 0.2s;
   z-index: 1;
-  border-radius: 25px;
+    border-radius: var(--border-rds);
+
   cursor: pointer;
   background-color: #fff;
   font-weight: 500;

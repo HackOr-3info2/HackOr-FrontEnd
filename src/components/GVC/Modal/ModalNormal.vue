@@ -74,7 +74,7 @@ body.modal-open {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    border: 3px solid var(--text-color-lg);
+    border: 3px solid var(--black);
     padding: 0em 1em 2em 1em;
     overflow-y: hidden;
     height: 65vh;

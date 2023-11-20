@@ -33,7 +33,7 @@ export default {}
 }
 .search_icon {
   box-sizing: border-box;
-  fill: var(--text-color-lg);
+  fill: var(--black);
   font-size: 1.3em;
 }
 .container {
@@ -48,12 +48,12 @@ export default {}
   width: 25em;
   height: 50px;
   background-color: #fff;
-  border: 3px solid var(--text-color-lg);
+  border: 3px solid var(--black);
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   justify-content: center;
-  border-radius: 160px;
+  border-radius: var(--border-rds);
   transition: all 0.3s ease;
 }
 

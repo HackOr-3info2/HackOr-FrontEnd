@@ -47,6 +47,6 @@ export default {}
 }
 
 .textareaGroup :is(textarea:focus, textarea:valid) {
-  border-color: var(--text-color-lg);
+  border-color: var(--black);
 }
 </style>
