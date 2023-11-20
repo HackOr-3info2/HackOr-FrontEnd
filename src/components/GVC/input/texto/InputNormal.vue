@@ -1,8 +1,8 @@
 <template>
-<div class="inputGroup">
-    <input autocomplete="off" required="" type="text">
+  <div class="inputGroup">
+    <input autocomplete="off" required="" type="text" />
     <label for="name">Normal</label>
-</div>
+  </div>
 </template>
 
 <script>
@@ -35,8 +35,8 @@ export default {}
   color: rgb(100, 100, 100);
 }
 
-.inputGroup :is(input:focus, input:valid)~label {
-  transform: translateY(-50%) scale(.9);
+.inputGroup :is(input:focus, input:valid) ~ label {
+  transform: translateY(-50%) scale(0.9);
   margin: 0em;
   margin-left: 1.3em;
   padding: 0.4em;
