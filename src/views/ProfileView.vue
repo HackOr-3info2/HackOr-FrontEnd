@@ -1,7 +1,14 @@
-<script setup></script>
+<script setup>
+import SideBar from "../components/GVC/SideBar.vue"
+import ProfileTop from "../components/template/section/Profile/ProfileTop.vue"
+</script>
 
 <template>
-  a
+  
+  <SideBar />
+  <main>
+    <ProfileTop />
+  </main> 
 </template>
 
 <style scoped>

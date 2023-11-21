@@ -22,13 +22,15 @@ a:hover {
 .login-content {
   border: 3px solid var(--black);
   border-radius: var(--border-rds);
-  height: 80vh;
+  height: 88vh;
   width: 30em;
 }
 .login-content {
   background-color: white;
-  padding: 1.5em 3em;
-  z-index: 2;
+    padding: 1.5em 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 section {

@@ -24,7 +24,7 @@ import ButtonPrimary from '../../GVC/Buttons/ButtonPrimary.vue'
         </label>
         <span>Lembrar de mim</span>
       </div>
-      <ButtonPrimary text="entrar" link="/" />
+      <ButtonPrimary text="entrar" link="/profile" />
     </form>
     <div class="accounts">
       <hr />
@@ -43,11 +43,9 @@ import ButtonPrimary from '../../GVC/Buttons/ButtonPrimary.vue'
 </template>
 
 <style scoped>
-h1 {
-  margin-bottom: 1.5em;
-}
+
 .accounts {
-  margin-top: 10em;
+  margin-top: 2em;
 }
 .accounts hr {
   overflow: visible;
