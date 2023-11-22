@@ -1,6 +1,6 @@
 <script setup>
-import NavTop from "../components/GVC/NavTop.vue";
-import HeroSection from "../components/template/section/HeroSection.vue";
+import NavTop from "../../src/components/GVC/NavTop.vue";
+import HeroSection from "../../src/components/template/section/HeroSection.vue";
 </script>
 
 <template>

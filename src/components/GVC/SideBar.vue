@@ -28,15 +28,15 @@
       <a href="#"> <box-icon color="#fff" size="2em" name="bell"></box-icon> <span>Notifications</span> </a>
     </li>
     <li>
-      <a href="#">
+      <RouterLink to="/settings">
         <box-icon name="cog" color="#fff" size="2em" type="solid"></box-icon> <span>Settings</span>
-      </a>
+      </RouterLink>
     </li>
     <li>
-      <a href="#">
+      <RouterLink to="/profile">
         <box-icon type="solid" color="#fff" size="2em" name="user-circle"></box-icon>
         <span>Profile</span>
-      </a>
+      </RouterLink>
     </li>
   </ul>
 </template>

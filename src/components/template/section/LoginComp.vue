@@ -1,5 +1,16 @@
 <script setup>
+import { reactive } from 'vue'
 import ButtonPrimary from '../../GVC/Buttons/ButtonPrimary.vue'
+
+const data = reactive({
+  showPassword: false,
+  isEmailInvalid: false
+})
+
+const togglePasswordVisibility = () => {
+  data.showPassword = !data.showPassword
+}
+
 </script>
 
 <template>
@@ -9,12 +20,18 @@ import ButtonPrimary from '../../GVC/Buttons/ButtonPrimary.vue'
     <form @submit.prevent="submit">
       <div class="all-inputs">
         <div class="inputGroup">
-          <input autocomplete="off" required="" type="email" />
+          <input class="email" autocomplete="off" required placeholder="email" type="email" />
           <label for="name">Email</label>
         </div>
         <div class="inputGroup">
-          <input autocomplete="off" required="" type="email" />
+          <input autocomplete="off" required="" :type="data.showPassword ? 'text' : 'password'" />
           <label for="name">Senha</label>
+          <div class="icone" @click="togglePasswordVisibility">
+            <box-icon
+              :name="data.showPassword ? 'lock-open' : 'lock'"
+              color="var(--black)"
+            ></box-icon>
+          </div>
         </div>
       </div>
       <div class="lembrar">
@@ -43,10 +60,10 @@ import ButtonPrimary from '../../GVC/Buttons/ButtonPrimary.vue'
 </template>
 
 <style scoped>
-
 .accounts {
   margin-top: 2em;
 }
+
 .accounts hr {
   overflow: visible;
   padding: 0;
@@ -57,29 +74,34 @@ import ButtonPrimary from '../../GVC/Buttons/ButtonPrimary.vue'
   text-align: center;
 }
 .registrar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
 }
 .registrar a {
-    font-weight: bold;
-    text-decoration: underline;
+  font-weight: bold;
+  text-decoration: underline;
 }
 .registrar a:hover {
-    font-weight: bold;
-    text-decoration: none;
+  font-weight: bold;
+  text-decoration: none;
 }
 .lembrar {
   display: flex;
   align-items: center;
   gap: 0.78em;
-  margin-bottom: .8em;
+  margin-bottom: 0.8em;
 }
 .clear {
   clear: both;
 }
-
+.icone {
+  position: absolute;
+  top: 23%;
+  left: 89%;
+  cursor: pointer;
+}
 .checkBox {
   display: block;
   cursor: pointer;
@@ -154,9 +176,13 @@ import ButtonPrimary from '../../GVC/Buttons/ButtonPrimary.vue'
   border-radius: var(--border-rds);
   width: 100%;
 }
-
+input::placeholder {
+  color: transparent;
+}
 .inputGroup label {
   position: absolute;
+  display: block;
+  top: 0;
   left: 0;
   padding: 0.8em;
   margin-left: 0.5em;
@@ -172,7 +198,13 @@ import ButtonPrimary from '../../GVC/Buttons/ButtonPrimary.vue'
   padding: 0.4em;
   background-color: var(--bg-light);
 }
-
+.inputGroup .email:invalid:not(:placeholder-shown) ~ label {
+  transform: translateY(-50%) scale(0.9);
+  margin: 0em;
+  margin-left: 1.3em;
+  padding: 0.4em;
+  background-color: var(--bg-light);
+}
 .inputGroup :is(input:focus, input:valid) {
   border-color: var(--black);
 }
