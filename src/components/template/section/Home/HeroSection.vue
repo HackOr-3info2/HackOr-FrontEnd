@@ -1,6 +1,6 @@
 <script setup>
-import ButtonPrimaryNo from '../../GVC/Buttons/ButtonPrimaryNo.vue'
-import ButtonSecondaryNo from '../../GVC/Buttons/ButtonSecondaryNo.vue'
+import ButtonPrimaryNo from '../../../GVC/Buttons/ButtonPrimaryNo.vue'
+import ButtonSecondaryNo from '../../../GVC/Buttons/ButtonSecondaryNo.vue'
 </script>
 
 <template>

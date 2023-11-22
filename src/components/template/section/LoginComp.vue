@@ -1,5 +1,7 @@
 <script setup>
 import { reactive } from 'vue'
+import { useAuthStore } from '@/stores/auth'
+import { useRouter } from 'vue-router'
 import ButtonPrimary from '../../GVC/Buttons/ButtonPrimary.vue'
 
 const data = reactive({
@@ -11,6 +13,22 @@ const togglePasswordVisibility = () => {
   data.showPassword = !data.showPassword
 }
 
+const authStore = useAuthStore()
+const router = useRouter()
+
+const user = reactive({
+  email: '',
+  password: ''
+})
+
+async function submit() {
+  try {
+    await authStore.login(user)
+    router.push('/profile')
+  } catch (error) {
+    console.error(error)
+  }
+}
 </script>
 
 <template>
@@ -20,11 +38,23 @@ const togglePasswordVisibility = () => {
     <form @submit.prevent="submit">
       <div class="all-inputs">
         <div class="inputGroup">
-          <input class="email" autocomplete="off" required placeholder="email" type="email" />
+          <input
+            v-model="user.email"
+            class="email"
+            autocomplete="off"
+            required
+            placeholder="email"
+            type="email"
+          />
           <label for="name">Email</label>
         </div>
         <div class="inputGroup">
-          <input autocomplete="off" required="" :type="data.showPassword ? 'text' : 'password'" />
+          <input
+            autocomplete="off"
+            required=""
+            v-model="user.password"
+            :type="data.showPassword ? 'text' : 'password'"
+          />
           <label for="name">Senha</label>
           <div class="icone" @click="togglePasswordVisibility">
             <box-icon
@@ -41,7 +71,7 @@ const togglePasswordVisibility = () => {
         </label>
         <span>Lembrar de mim</span>
       </div>
-      <ButtonPrimary text="entrar" link="/profile" />
+      <button  @submit.prevent="submit" type="submit">entrar</button>
     </form>
     <div class="accounts">
       <hr />
@@ -102,6 +132,54 @@ const togglePasswordVisibility = () => {
   left: 89%;
   cursor: pointer;
 }
+
+button {
+  display: inline-block;
+  padding: 0.7em 2em;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid var(--black);
+  transition: color 0.2s;
+  z-index: 1;
+    border-radius: var(--border-rds);
+
+  cursor: pointer;
+  background-color: #fff;
+  font-weight: 500;
+  color: var(--text-color-lg);
+}
+
+button:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background: var(--bg-black);
+  height: 150px;
+  width: 200px;
+    border-radius: var(--border-rds);
+
+}
+
+button:hover {
+  color: #fff;
+}
+
+button:before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.5s;
+}
+
+button:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+button:active:before {
+  background: var(--bg-black);
+  transition: background 0s;
+}
+
 .checkBox {
   display: block;
   cursor: pointer;
