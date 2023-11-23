@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+import PessoaisComp from '../components/template/section/Settings/PessoaisComp.vue';
+import SistemaComp from '../components/template/section/Settings/SistemaComp.vue';
+</script>
 
 <template>
   <main>
@@ -10,23 +13,19 @@
         veniam, accusamus aperiam in.
       </p>
     </div>
-    <section class="pessoais">
-      <h3>Informações pessoais</h3>
-      
-    </section>
+    <PessoaisComp />
+    <SistemaComp />
   </main>
 </template>
 
 <style scoped>
 main {
-  padding: 5em 20em;
+  padding: 5em 25em;
 }
 .header {
   border: 4px solid var(--primary-color-lg);
   padding: 2em;
   border-radius: var(--border-rds);
 }
-.pessoais {
-  margin-top: 2em
-}
+
 </style>

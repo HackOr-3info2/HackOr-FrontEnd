@@ -71,7 +71,7 @@ async function submit() {
         </label>
         <span>Lembrar de mim</span>
       </div>
-      <button  @submit.prevent="submit" type="submit">entrar</button>
+      <button  @submit.prevent="submit" @keypress="enter" type="submit">entrar</button>
     </form>
     <div class="accounts">
       <hr />
