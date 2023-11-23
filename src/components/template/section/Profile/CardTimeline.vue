@@ -83,6 +83,13 @@
   color: var(--primary-color-lg);
   margin-top: 2px;
 }
+.desc dt {
+  font-weight: bold;  
+}
+body.dark-mode .desc dd {
+  color: var(--primary-color-dk);
+  margin-top: 2px;
+} 
 
 .unid {
   margin-left: 2rem;

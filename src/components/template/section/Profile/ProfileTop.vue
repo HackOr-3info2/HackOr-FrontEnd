@@ -14,7 +14,7 @@
 <style scoped>
 
 .icon-profile {
-    border: 5px solid var(--black);
+    border: 5px solid;
     width: 15em;
     border-radius: 50%;
 }

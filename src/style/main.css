@@ -6,7 +6,17 @@
   font-family: 'Inter', sans-serif;
   box-sizing: border-box;
   transition: 0.3s;
+}
+
+body.light-mode {
+  transition: 0s;
   color: var(--text-color-lg);
+  background-color: var(--bg-light);
+}
+body.dark-mode {
+  transition: 0s;
+  color: var(--text-color-dk);
+  background-color: var(--bg-dark);
 }
 
 

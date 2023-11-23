@@ -1,5 +1,5 @@
 <script setup>
-import ButtonPrimary from '../../../GVC/Buttons/ButtonPrimary.vue'
+import ButtonPrimaryNo from '../../../GVC/Buttons/ButtonPrimaryNo.vue'
 import ButtonIcon from '../../../GVC/Buttons/ButtonIcon.vue'
 </script>
 
@@ -10,7 +10,7 @@ import ButtonIcon from '../../../GVC/Buttons/ButtonIcon.vue'
       <div class="icon-header">
         <div class="icon">
           <img src="../../../../assets/eu.jpg" alt="" />
-          <ButtonPrimary text="Editar" link="/a" />
+          <ButtonPrimaryNo text="Editar" link="/a" />
         </div>
         <div class="header">
           <div class="container">
@@ -21,6 +21,10 @@ import ButtonIcon from '../../../GVC/Buttons/ButtonIcon.vue'
         </div>
       </div>
       <div class="content">
+        <div class="inputGroup disabled">
+          <input autocomplete="off" disabled placeholder="@horodeski" type="text" />
+          <label for="name">User</label>
+        </div>
         <div class="inputGroup">
           <input
             autocomplete="off"
@@ -29,10 +33,6 @@ import ButtonIcon from '../../../GVC/Buttons/ButtonIcon.vue'
             type="text"
           />
           <label for="name">Nome Completo</label>
-        </div>
-        <div class="inputGroup disabled">
-          <input autocomplete="off" disabled placeholder="@horodeski" type="text" />
-          <label for="name">User</label>
         </div>
         <div class="inputGroup">
           <textarea
@@ -90,9 +90,7 @@ section {
   justify-content: flex-end;
   padding: 1em;
 }
-.color {
-  color: white;
-}
+
 .config {
   display: flex;
   margin-top: 4em;
@@ -106,7 +104,7 @@ section {
   display: flex;
   flex-direction: column;
   padding: 2em;
-  border: 5px solid var(--primary-color-lg);
+  border: 5px solid;
 }
 .inputGroup {
   max-width: 100%;
@@ -118,7 +116,8 @@ textarea {
   font-size: 100%;
   padding: 1.5em;
   outline: none;
-  border: 2px solid rgb(200, 200, 200);
+  color: var(--primary-color-lg);
+  border: 3px solid var(--primary-color-lg);
   background-color: transparent;
   border-radius: var(--border-rds);
   width: 100%;
@@ -139,13 +138,21 @@ textarea {
   margin-left: 0.5em;
   pointer-events: none;
   transition: all 0.3s ease;
-  color: rgb(100, 100, 100);
+}
+.inputGroup :is(input:focus, input:valid, textarea:focus) {
+  border-color: var(--gray);
+}
+body.dark-mode .inputGroup label {
+  background-color: var(--bg-dark);
+  color: var(--primary-color-dk);
 }
 
-.inputGroup :is(input:focus, input:valid) ~ label {
+body.dark-mode .inputGroup input,
+body.dark-mode textarea {
+  border: 3px solid var(--primary-color-dk);
+  color: var(--primary-color-dk);
 }
-
-.inputGroup :is(input:focus, input:valid) {
-  border-color: var(--black);
+body.dark-mode .inputGroup :is(input:focus, input:valid, textarea:focus) {
+  border-color: var(--gray);
 }
 </style>

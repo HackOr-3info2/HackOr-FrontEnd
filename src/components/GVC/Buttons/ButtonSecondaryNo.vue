@@ -1,8 +1,6 @@
 <template>
   <button>
-    <RouterLink :to="link">
-      {{ text }}
-    </RouterLink>
+    {{ text }}
   </button>
 </template>
 
@@ -23,7 +21,6 @@ button {
   transition: transform 0.2s;
   z-index: 1;
   border-radius: var(--border-rds);
-
   cursor: pointer;
   background-color: var(--bg-black);
   font-weight: 500;

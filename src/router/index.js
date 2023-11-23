@@ -3,6 +3,7 @@ import HomeView from '@/views/HomeView.vue'
 import AuthView from '@/views/AuthView.vue'
 import ProfileView from '@/views/ProfileView.vue'
 import SettingsView from '@/views/SettingsView.vue'
+import CrudView from '@/views/CrudView.vue'
 import FullView from '../layouts/FullView.vue'
 import BlankView from '../layouts/BlankView.vue'
 import NoneView from '../layouts/NoneView.vue'
@@ -28,6 +29,11 @@ const router = createRouter({
           path: '/settings',
           name: 'settings',
           component: SettingsView
+        },
+        {
+          path: '/crud',
+          name: 'crud',
+          component: CrudView
         }
       ]
     },

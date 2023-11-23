@@ -1,6 +1,7 @@
 <script setup>
 import PessoaisComp from '../components/template/section/Settings/PessoaisComp.vue';
 import SistemaComp from '../components/template/section/Settings/SistemaComp.vue';
+
 </script>
 
 <template>
@@ -23,8 +24,9 @@ main {
   padding: 5em 25em;
 }
 .header {
-  border: 4px solid var(--primary-color-lg);
+  border: 4px solid ;
   padding: 2em;
+  margin-top: 2em;
   border-radius: var(--border-rds);
 }
 

@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink } from 'vue-router'
 import ButtonPrimaryNo from '../../../GVC/Buttons/ButtonPrimaryNo.vue'
 import ButtonSecondaryNo from '../../../GVC/Buttons/ButtonSecondaryNo.vue'
 </script>
@@ -12,12 +13,16 @@ import ButtonSecondaryNo from '../../../GVC/Buttons/ButtonSecondaryNo.vue'
       </p>
       <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h1>
       <div class="all-buttons">
-        <ButtonPrimaryNo text="Login" link="/login" />
-        <ButtonSecondaryNo text="Registar-se" link="/login" />
+        <RouterLink to="/login">
+          <ButtonPrimaryNo text="Login" />
+        </RouterLink>
+        <RouterLink to="/login">
+          <ButtonSecondaryNo text="Registar-se" link="/login" />
+        </RouterLink>
       </div>
     </div>
     <div>
-<!--       <img src="../../../assets/team-up.svg" alt="" /> -->
+      <!--       <img src="../../../assets/team-up.svg" alt="" /> -->
     </div>
   </section>
 </template>
@@ -43,7 +48,7 @@ section {
   display: flex;
   gap: 1em;
   width: fit-content;
-  margin-top: 5em
+  margin-top: 5em;
 }
 img {
   width: 30em;

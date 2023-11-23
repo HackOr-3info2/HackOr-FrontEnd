@@ -1,9 +1,7 @@
 <template>
-  <button>
-    <RouterLink :to="link">
+    <button>
       {{ text }}
-    </RouterLink>
-  </button>
+    </button>
 </template>
 
 <script setup>

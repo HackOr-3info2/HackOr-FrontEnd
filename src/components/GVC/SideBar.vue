@@ -1,51 +1,59 @@
 <script setup></script>
 <template>
-  <ul>
-    <li>
-      <a href="#">
-        <box-icon name='circle-three-quarter' color="#fff" size="2em" type='solid' ></box-icon>        <span>Dashboard</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <box-icon name='file-image' color="#fff" size="2em" type='solid' ></box-icon>        <span>Images</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <box-icon name='file-find' color="#fff" size="2em" type='solid' ></box-icon>        <span>Files</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <box-icon name='game' color="#fff" size="2em" type='solid' ></box-icon>        <span>Games</span>
-      </a>
-    </li>
-    <li>
-      <a href="#"> <box-icon color="#fff" size="2em" name="book-bookmark" type="solid"></box-icon> <span>Books</span> </a>
-    </li>
-    <li>
-      <a href="#"> <box-icon color="#fff" size="2em" name="bell"></box-icon> <span>Notifications</span> </a>
-    </li>
-    <li>
-      <RouterLink to="/settings">
-        <box-icon name="cog" color="#fff" size="2em" type="solid"></box-icon> <span>Settings</span>
-      </RouterLink>
-    </li>
-    <li>
-      <RouterLink to="/profile">
-        <box-icon type="solid" color="#fff" size="2em" name="user-circle"></box-icon>
-        <span>Profile</span>
-      </RouterLink>
-    </li>
-  </ul>
+  <nav>
+    <ul>
+      <li>
+        <a href="#">
+          <box-icon name="circle-three-quarter" color="#fff" size="2em" type="solid"></box-icon>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <box-icon name="file-image" color="#fff" size="2em" type="solid"></box-icon>
+          <span>Images</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <box-icon name="file-find" color="#fff" size="2em" type="solid"></box-icon>
+          <span>Files</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <box-icon name="game" color="#fff" size="2em" type="solid"></box-icon> <span>Games</span>
+        </a>
+      </li>
+      <li>
+        <RouterLink to="/crud">
+          <box-icon color="#fff" size="2em" name="book-bookmark" type="solid"></box-icon>
+          <span>Books</span>
+        </RouterLink>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <RouterLink to="/settings">
+          <box-icon name="cog" color="#fff" size="2em" type="solid"></box-icon>
+          <span>Settings</span>
+        </RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/profile">
+          <box-icon type="solid" color="#fff" size="2em" name="user-circle"></box-icon>
+          <span>Profile</span>
+        </RouterLink>
+      </li>
+    </ul>
+  </nav>
 </template>
 <style scoped>
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  margin-left: auto;
+nav {
+  top: 2%;
+  left: 2%;
+  border-radius: var(--border-rds);
+  height: 96vh;
   margin-right: auto;
   background-color: var(--bg-black);
   display: flex;
@@ -53,11 +61,11 @@ ul {
   justify-content: space-between;
   padding: 0.75rem;
   position: fixed;
-  top: 7%;
-  left: 2%;
-  border-radius: var(--border-rds);
 }
 
+ul {
+  list-style: none;
+}
 li:nth-child(6) {
   margin-top: 5rem;
   padding-top: 1.25rem;
