@@ -1,7 +1,8 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import ButtonPrimaryNo from '../../../GVC/Buttons/ButtonPrimaryNo.vue'
-import ButtonSecondaryNo from '../../../GVC/Buttons/ButtonSecondaryNo.vue'
+import ButtonSecondary from '../../../GVC/Buttons/ButtonSecondary.vue'
+import InputNormal from '../../../GVC/input/texto/InputNormal.vue'
 </script>
 
 <template>
@@ -17,12 +18,15 @@ import ButtonSecondaryNo from '../../../GVC/Buttons/ButtonSecondaryNo.vue'
           <ButtonPrimaryNo text="Login" />
         </RouterLink>
         <RouterLink to="/login">
-          <ButtonSecondaryNo text="Registar-se" link="/login" />
+          <ButtonSecondary text="Registar-se" link="/login" />
         </RouterLink>
       </div>
+<!--       <div class="newsletter">
+        <InputNormal />
+      </div> -->
     </div>
     <div>
-      <!--       <img src="../../../assets/team-up.svg" alt="" /> -->
+      <img src="../../../../assets/phones/SVG/DrawKit_Vector_Illustrations_Coffe call.svg" alt="">
     </div>
   </section>
 </template>
@@ -33,12 +37,12 @@ section {
   align-items: center;
   padding: 2em;
   margin: 3em 5em 0 5em;
-  position: absolute;
-  border-top-left-radius: 2em;
+  border-radius: var(--border-rds);
+  background-color: var(--black);
+  color: var(--white);
   height: 80vh;
-  border-top-right-radius: 2em;
+  
   border: 4px solid var(--black);
-  bottom: 0;
 }
 .content {
   width: 50%;

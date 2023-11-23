@@ -1,7 +1,7 @@
 <template>
   <button>
-      {{ text }}
-    </button>
+    {{ text }}
+  </button>
 </template>
 
 <script setup>
@@ -20,7 +20,7 @@ button {
   border: 3px solid var(--black);
   transition: transform 0.2s;
   z-index: 1;
-    border-radius: var(--border-rds);
+  border-radius: var(--border-rds);
 
   cursor: pointer;
   background-color: #fff;
@@ -30,6 +30,5 @@ button {
 }
 button:hover {
   transform: scale(1.05);
-
 }
 </style>
