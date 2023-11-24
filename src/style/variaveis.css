@@ -1,13 +1,13 @@
 :root {
-    --primary-color-lg: var(--black);
+    --primary-color-lg: #6F36F7;
     --primary-color-dk: var(--white);
     --text-color-lg: #363636;
     --text-color-dk: #f2f2f2;
     --bg-dark: #222;
-    --gray: #666;
-    --border-rds: 1em;
+    --gray: #dfdfdf;
+    --border-rds: .5em;
     --white: #ffffff;
     --black: #363636;
     --bg-black: #363636;
     --bg-light: #ffffff;
-}  
+}   

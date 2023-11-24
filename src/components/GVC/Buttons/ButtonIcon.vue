@@ -18,7 +18,7 @@ button {
   align-items: center;
   width: 2.5em;
   height: 2.5em;
-  border: 3px solid var(--primary-color-lg);
+  border: 3px solid var(--text-color-lg);
   background-color: transparent;
   cursor: pointer;
   outline-offset: 0;

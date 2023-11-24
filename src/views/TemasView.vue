@@ -1,16 +1,15 @@
 <script setup>
-import CardEquipe from '../components/Hackathon/section/Adminstracao/Equipes/CardEquipe.vue'
-import NavComp from '../components/Hackathon/section/Adminstracao/Equipes/NavComp.vue'
+import CardEquipe from '../components/Hackathon/section/Adminstracao/Temas/CardTema.vue'
+import NavComp from '../components/Hackathon/section/Adminstracao/Temas/NavComp.vue'
 </script>
 
 <template>
   <main>
-    <h2>Equipes</h2>
+    <h2>Temas</h2>
     <NavComp />
     <div class="all-equipes">
       <RouterLink to="/equipe/id">
         <CardEquipe
-          image="https://upload.wikimedia.org/wikipedia/commons/d/db/IFC_2014_logo.svg"
           nomeHackathon="Queremos ajuda do Eduardo"
           tema="Gereniador de Hackathons"
           turma="3INFO"

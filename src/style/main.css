@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Mitr:wght@200;300;400;500;600;700&family=Suwannaphum:wght@100;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Mitr:wght@200;300;400;500;600;700&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
   margin: 0;
@@ -9,13 +9,16 @@
 }
 
 body.light-mode {
+  color: var(--black);
   transition: 0s;
-  color: var(--text-color-lg);
   background-color: var(--bg-light);
 }
+dt, dd {
+  color: var(--black);
+}
 body.dark-mode {
+  color: var(--white);
   transition: 0s;
-  color: var(--text-color-dk);
   background-color: var(--bg-dark);
 }
 
@@ -23,6 +26,7 @@ body.dark-mode {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-thumb {
   border-radius: var(--border-rds);
   background: var(--bg-black);
@@ -34,12 +38,15 @@ h1 span {
   font-weight: 700;
   font-size: 3.125rem;
 }
+
 button a {
   font-size: 14px;
 }
+
 h2 {
   font-size: 2.188rem;
 }
+
 h3 {
   font-size: 1.863rem;
 }
@@ -49,12 +56,14 @@ a,
 span {
   font-size: 1.25rem;
 }
+
 h2,
 h3,
 h4,
 h5,
 a {
-  font-family: 'Suwannaphum', serif;
+  color: var(--text-color-lg);
+  font-family: 'Noto Sans', sans-serif;
 }
 
 a {
@@ -63,12 +72,15 @@ a {
 }
 
 p {
+  font-family: 'Noto Sans', sans-serif;
   font-size: 1.3rem;
   font-weight: 'normal';
   line-height: 1.5em;
-  font-family: 'Alegreya Sans', sans-serif;
 }
 
+body.light-mode p, body.light-mode h1, body.light-mode h2, body.light-mode h3, body.light-mode h4, body.light-mode button a, body.light-mode h5, body.light-mode h6, body.light-mode span {
+  color: var(--text-color-lg)
+}
 
 
 @media only screen and (max-width: 600px) {
@@ -81,6 +93,7 @@ p {
     margin: 40px 0;
     font-weight: 700;
   }
+
   html {
     scroll-padding-top: 3em;
   }

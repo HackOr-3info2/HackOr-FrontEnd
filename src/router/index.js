@@ -3,6 +3,9 @@ import HomeView from '@/views/HomeView.vue'
 import AuthView from '@/views/AuthView.vue'
 import ProfileView from '@/views/ProfileView.vue'
 import EquipesView from '@/views/EquipesView.vue'
+import TemasView from '@/views/TemasView.vue'
+import TemaView from '@/views/TemaView.vue'
+import EquipeView from '@/views/EquipeView.vue'
 import SettingsView from '@/views/SettingsView.vue'
 import CrudView from '@/views/CrudView.vue'
 import FullView from '../layouts/FullView.vue'
@@ -40,7 +43,20 @@ const router = createRouter({
           path: '/equipes',
           name: 'equipes',
           component: EquipesView
-        }
+        },
+        {
+          path: '/equipe/id',
+          component: EquipeView
+        },
+        {
+          path: '/temas',
+          name: 'temas',
+          component: TemasView
+        },
+        {
+          path: '/tema/id',
+          component: TemaView
+        },
       ]
     },
     {

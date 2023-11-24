@@ -21,8 +21,7 @@ defineProps ({
 <style scoped>
 
 .icon-profile {
-    border: 5px solid;
-    width: 15em;
+    width: 11em;
     border-radius: 50%;
 }
 .nome-user {
@@ -32,6 +31,6 @@ defineProps ({
     
 }
 .content {
-
+margin-top: 1em
 }
 </style>

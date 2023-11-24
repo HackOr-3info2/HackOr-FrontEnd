@@ -5,7 +5,7 @@ import NavComp from '../components/Hackathon/section/Adminstracao/Equipes/NavCom
 
 <template>
   <main>
-    <h2>Equipes</h2>
+    <h2>Tema</h2>
     <NavComp />
     <div class="all-equipes">
       <RouterLink to="/equipe/id">

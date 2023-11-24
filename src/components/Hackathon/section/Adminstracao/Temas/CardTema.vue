@@ -10,9 +10,6 @@ defineProps({
 </script>
 <template>
   <div class="card">
-    <div class="logo">
-      <img :src="image" />
-    </div>
     <dl class="desc">
       <div>
         <dd class="title">{{ nomeHackathon }}</dd>
@@ -57,20 +54,6 @@ defineProps({
   }
 }
 
-.logo {
-  background-color: var(--primary-color-lg);
-  width: 90px;
-  height: 90px;
-  display: flex;
-  align-items: center;
-  border-radius: 10px;
-  position: absolute;
-  justify-content: center;
-}
-.logo img {
-  border-radius: 10px;
-  width: 100%;
-}
 
 .desc {
   margin: 0 5em 0 8em;

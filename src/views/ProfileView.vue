@@ -1,6 +1,6 @@
 <script setup>
 import ProfileTop from '../components/Hackathon/section/Profile/ProfileTop.vue'
-import AtvComp from '../components/Hackathon/section/Profile/AtvComp.vue'
+import PerfilDetalhes from '../components/Hackathon/section/Profile/PerfilDetalhes.vue'
 </script>
 
 <template>
@@ -12,7 +12,7 @@ import AtvComp from '../components/Hackathon/section/Profile/AtvComp.vue'
       user="edudasilva"
       descricao="Hands-on with cloud computing, devops tools, full-stack, programming concepts and open source/leading frameworks."
     />
-    <AtvComp />
+    <PerfilDetalhes />
   </main>
 </template>
 
@@ -23,7 +23,6 @@ main {
 .header {
   position: absolute;
   top: 0;
-  border-bottom: 5px solid;
   width: 100%;
   z-index: -10;
   height: 25vh;

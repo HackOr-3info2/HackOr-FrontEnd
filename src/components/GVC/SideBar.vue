@@ -4,44 +4,49 @@
     <ul>
       <li>
         <a href="#">
-          <box-icon name="circle-three-quarter" color="#fff" size="2em" type="solid"></box-icon>
+          <box-icon
+            name="circle-three-quarter"
+            color="var(--gray)"
+            size="2em"
+            type="solid"
+          ></box-icon>
           <span>Dashboard</span>
         </a>
       </li>
       <li>
         <a href="#">
-          <box-icon name="file-image" color="#fff" size="2em" type="solid"></box-icon>
+          <box-icon name="file-image" color="var(--gray)" size="2em" type="solid"></box-icon>
           <span>Images</span>
         </a>
       </li>
       <li>
         <a href="#">
-          <box-icon name="file-find" color="#fff" size="2em" type="solid"></box-icon>
+          <box-icon name="file-find" color="var(--gray)" size="2em" type="solid"></box-icon>
           <span>Files</span>
         </a>
       </li>
       <li>
-        <RouterLink to="/equipes" >
-          <box-icon name="child" color="#fff" size="2em" ></box-icon> <span>Equipes</span>
+        <RouterLink to="/equipes">
+          <box-icon name="child" color="var(--gray)" size="2em"></box-icon> <span>Equipes</span>
         </RouterLink>
       </li>
       <li>
-        <RouterLink to="/crud">
-          <box-icon color="#fff" size="2em" name="book-bookmark" type="solid"></box-icon>
-          <span>Books</span>
+        <RouterLink to="/temas">
+          <box-icon color="var(--gray)" size="2em" name="book-bookmark" type="solid"></box-icon>
+          <span>Temas</span>
         </RouterLink>
       </li>
     </ul>
     <ul>
       <li>
         <RouterLink to="/settings">
-          <box-icon name="cog" color="#fff" size="2em" type="solid"></box-icon>
+          <box-icon name="cog" color="var(--gray)" size="2em" type="solid"></box-icon>
           <span>Settings</span>
         </RouterLink>
       </li>
       <li>
         <RouterLink to="/profile">
-          <box-icon type="solid" color="#fff" size="2em" name="user-circle"></box-icon>
+          <box-icon type="solid" color="var(--gray)" size="2em" name="user-circle"></box-icon>
           <span>Profile</span>
         </RouterLink>
       </li>
@@ -50,10 +55,7 @@
 </template>
 <style scoped>
 nav {
-  top: 2%;
-  left: 2%;
-  border-radius: var(--border-rds);
-  height: 96vh;
+  height: 100vh;
   margin-right: auto;
   background-color: var(--bg-black);
   display: flex;
@@ -62,7 +64,8 @@ nav {
   padding: 0.75rem;
   position: fixed;
 }
-
+nav * {
+}
 ul {
   list-style: none;
 }
@@ -117,6 +120,8 @@ a span {
   border-radius: var(--border-rds);
   left: calc(100% + 1.5rem);
   transform-origin: center left;
+  z-index: 1000;
+
   transform: scale(0);
   opacity: 0;
   transition: 0.15s ease;
