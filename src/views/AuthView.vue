@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import LoginComp from "../../src/components/template/section/LoginComp.vue"
+import LoginComp from "../../src/components/Hackathon/section/LoginComp.vue"
 </script>
 
 <style scoped>

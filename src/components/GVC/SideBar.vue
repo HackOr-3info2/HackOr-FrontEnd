@@ -21,9 +21,9 @@
         </a>
       </li>
       <li>
-        <a href="#">
-          <box-icon name="game" color="#fff" size="2em" type="solid"></box-icon> <span>Games</span>
-        </a>
+        <RouterLink to="/equipes" >
+          <box-icon name="child" color="#fff" size="2em" ></box-icon> <span>Equipes</span>
+        </RouterLink>
       </li>
       <li>
         <RouterLink to="/crud">

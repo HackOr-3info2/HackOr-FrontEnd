@@ -1,4 +1,11 @@
-<script setup></script>
+<script setup>
+defineProps ({
+  nomeHackathon: String,
+  tema: String,
+  edicao: Number,
+  avaliacao: String 
+})
+</script>
 <template>
     <div class="card">
       <div class="logo">
@@ -6,13 +13,18 @@
       </div>
       <dl class="desc">
         <div>
-          <dt>Apple</dt>
-          <dd>@horodeski</dd>
+          <dt>{{ nomeHackathon }}</dt>
+          <dd>{{ tema }}</dd>
         </div>
-        <dt>28 Jul. 23</dt>
-        <dt>R$268,05</dt>
+        <div>
+          <dd>Edição</dd>
+          <dt>{{ edicao }}</dt>
+        </div>
+        <div>
+          <dd>Avaliação</dd>
+          <dt>{{ avaliacao }}</dt>
+        </div>
       </dl>
-      <div class="unid">+300 Und.</div>
     </div>
 </template>
 <style scoped>
@@ -62,9 +74,6 @@
     margin-top: 1rem;
   }
 }
-.desc div {
-  width: calc(100% / 3 - 1rem);
-}
 @media (max-width: 1000px) {
   .desc div {
     width: 100%;
@@ -84,6 +93,7 @@
   margin-top: 2px;
 }
 .desc dt {
+  width: max-content;
   font-weight: bold;  
 }
 body.dark-mode .desc dd {

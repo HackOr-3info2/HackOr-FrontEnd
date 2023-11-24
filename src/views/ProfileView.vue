@@ -1,12 +1,17 @@
 <script setup>
-import ProfileTop from '../components/template/section/Profile/ProfileTop.vue'
-import AtvComp from '../components/template/section/Profile/AtvComp.vue'
+import ProfileTop from '../components/Hackathon/section/Profile/ProfileTop.vue'
+import AtvComp from '../components/Hackathon/section/Profile/AtvComp.vue'
 </script>
 
 <template>
   <div class="header"></div>
   <main>
-    <ProfileTop />
+    <ProfileTop
+      image="https://avatars.githubusercontent.com/u/48130339?v=4"
+      nome="Eduardo da Silva"
+      user="edudasilva"
+      descricao="Hands-on with cloud computing, devops tools, full-stack, programming concepts and open source/leading frameworks."
+    />
     <AtvComp />
   </main>
 </template>
@@ -18,7 +23,7 @@ main {
 .header {
   position: absolute;
   top: 0;
-  border-bottom: 5px solid ;
+  border-bottom: 5px solid;
   width: 100%;
   z-index: -10;
   height: 25vh;

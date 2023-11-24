@@ -1,6 +1,6 @@
 <script setup>
-import PessoaisComp from '../components/template/section/Settings/PessoaisComp.vue';
-import SistemaComp from '../components/template/section/Settings/SistemaComp.vue';
+import PessoaisComp from '../components/Hackathon/section/Settings/PessoaisComp.vue';
+import SistemaComp from '../components/Hackathon/section/Settings/SistemaComp.vue';
 
 </script>
 
