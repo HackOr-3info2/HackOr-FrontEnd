@@ -11,9 +11,9 @@ import AvaliacoesSection from '../components/Hackathon/section/Profile/Avaliacoe
       image="https://avatars.githubusercontent.com/u/48130339?v=4"
       nome="Eduardo da Silva"
       user="edudasilva"
+      descricao="Hands-on with cloud computing, devops tools, full-stack, programming concepts and open source/leading frameworks."
     />
     <PerfilDetalhes
-      descricao="Hands-on with cloud computing, devops tools, full-stack, programming concepts and open source/leading frameworks."
     />
     <AvaliacoesSection />
   </main>
@@ -33,6 +33,5 @@ section {
   z-index: -10;
   height: 25vh;
   background-color: #265e81;
-  border-bottom: 4px solid var(--text-color-lg);
 }
 </style>

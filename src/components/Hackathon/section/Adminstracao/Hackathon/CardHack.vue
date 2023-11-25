@@ -8,16 +8,10 @@ defineProps({
   fim: String,
   inicio: String,
   image: String,
-  linkHackathon: {
-    type: Object
-  }
 })
-const UrlHackathon = (id) => {
-  return `/hackathon/${id}`
-}
 </script>
 <template>
-  <RouterLink :to="UrlHackathon(linkHackathon.id)">
+  <RouterLink to="/hackathon/id">
     <div class="card">
       <div class="logo">
         <img :src="image" />
