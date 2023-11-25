@@ -1,3 +1,31 @@
+<script setup>
+import CarouselComp from '../components/Hackathon/section/Adminstracao/Equipes/CarouselComp.vue'
+import MembrosComp from '../components/Hackathon/section/Adminstracao/Equipes/MembrosComp.vue'
+
+import { ref, onMounted } from 'vue'
+const equipeApi = new EquipeApi()
+const equipes = ref([])
+
+onMounted(async () => {
+  equipes.value = await equipeApi.buscarTodosAsEquipes()
+  
+})
+
+const carouselImages = [
+  {
+    src: 'https://fabricadesoftware.surge.sh/img/Projects/FabricaPortal/image1.png'
+  },
+  {
+    src: 'https://fabricadesoftware.surge.sh/img/Projects/FabricaPortal/image2.png'
+  },
+  {
+    src: 'https://fabricadesoftware.surge.sh/img/Projects/FabricaPortal/image3.png'
+  }
+]
+
+</script>
+
+
 <template>
   <main>
     <img
@@ -38,21 +66,6 @@
   </main>
 </template>
 
-<script setup>
-import CarouselComp from '../components/Hackathon/section/Adminstracao/Equipes/CarouselComp.vue'
-import MembrosComp from '../components/Hackathon/section/Adminstracao/Equipes/MembrosComp.vue'
-const carouselImages = [
-  {
-    src: 'https://fabricadesoftware.surge.sh/img/Projects/FabricaPortal/image1.png'
-  },
-  {
-    src: 'https://fabricadesoftware.surge.sh/img/Projects/FabricaPortal/image2.png'
-  },
-  {
-    src: 'https://fabricadesoftware.surge.sh/img/Projects/FabricaPortal/image3.png'
-  }
-]
-</script>
 
 <style scoped>
 main {

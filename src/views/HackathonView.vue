@@ -1,6 +1,16 @@
 <script setup>
+import { ref, onMounted } from 'vue'
 import CardHack from '../components/Hackathon/section/Adminstracao/Hackathon/CardHack.vue'
 import NavComp from '../components/Hackathon/section/Adminstracao/Hackathon/NavComp.vue'
+import HackathonApi from '../services/hackathon'
+
+const hackathonApi = new HackathonApi()
+const hackathons = ref([])
+
+onMounted(async () => {
+  hackathons.value = await hackathonApi.buscarTodosOsHackathons()
+  
+})
 </script>
 
 <template>
@@ -18,28 +28,16 @@ import NavComp from '../components/Hackathon/section/Adminstracao/Hackathon/NavC
     <NavComp />
     <h3></h3>
     <div class="all-equipes">
-      <RouterLink to="/hackathon/id">
-        <CardHack
-          image="https://upload.wikimedia.org/wikipedia/commons/d/db/IFC_2014_logo.svg"
-          nomeHackathon="Hackathon segundo série (2023) "
-          tema="Gereniador de Hackathons"
-          inicio="22/06/2023"
-          fim="22/06/2023"
-          status="Concluído"
-          avaliacao="10/10"
-        />
-      </RouterLink>
-      <RouterLink to="/hackathon/id">
-        <CardHack
-          image="https://upload.wikimedia.org/wikipedia/commons/d/db/IFC_2014_logo.svg"
-          nomeHackathon="Hackathon segundo série (2023) "
-          tema="Gereniador de Hackathons"
-          inicio="22/06/2023"
-          fim="22/06/2023"
-          status="Concluído"
-          avaliacao="10/10"
-        />
-      </RouterLink>
+      <CardHack
+        v-for="hackathon in hackathons"
+        :key="hackathon.id"
+        :tema="hackathon.tema"
+        :status="hackathon.estado"
+        :inicio="hackathon.data_inicio"
+        :fim="hackathon.data_final"
+        :linkHackathon="hackathon"
+        :descricao="hackathon.descricao"
+      />
     </div>
     <button>
       <span> Ver mais Hackathons </span>

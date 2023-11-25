@@ -18,12 +18,8 @@ onMounted(async() => {
     <h2>Temas</h2>
     <NavComp />
     <div class="all-temas">
-      <CardTema v-for="tema in temas" :key="tema.id" descricao="tema.Descricao" />
+      <CardTema v-for="tema in temas" :key="tema.id" :descricao="tema.descricao" />
     </div>
-    <button>
-      <span> Ver mais temas </span>
-      <box-icon name="chevron-down" color="#383838" size="1.5em" type="solid"></box-icon>
-    </button>
   </main>
 </template>
 

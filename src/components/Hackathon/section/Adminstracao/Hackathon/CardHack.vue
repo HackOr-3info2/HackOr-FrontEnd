@@ -7,35 +7,40 @@ defineProps({
   turma: String,
   fim: String,
   inicio: String,
-  image: String
+  image: String,
+  linkHackathon: {
+    type: Object
+  }
 })
+const UrlHackathon = (id) => {
+  return `/hackathon/${id}`
+}
 </script>
 <template>
-  <div class="card">
-    <div class="logo">
-      <img :src="image" />
+  <RouterLink :to="UrlHackathon(linkHackathon.id)">
+    <div class="card">
+      <div class="logo">
+        <img :src="image" />
+      </div>
+      <dl class="desc">
+        <div>
+          <dd class="title">{{ tema }}</dd>
+        </div>
+        <div>
+          <dd>Status</dd>
+          <dt>{{ status }}</dt>
+        </div>
+        <div>
+          <dd>Início</dd>
+          <dt>{{ inicio }}</dt>
+        </div>
+        <div>
+          <dd>Fim</dd>
+          <dt>{{ fim }}</dt>
+        </div>
+      </dl>
     </div>
-    <dl class="desc">
-      <div>
-        <dd class="title">{{ nomeHackathon }}</dd>
-        <dt>{{ tema }}</dt>
-      </div>
-      <div>
-        <dd>Status</dd>
-        <dt>{{ status }}</dt>
-      </div>
-      <div>
-        <dd>
-            Início
-        </dd>
-        <dt>{{ inicio }}</dt>
-      </div>
-      <div>
-        <dd>Fim</dd>
-        <dt>{{ fim }}</dt>
-      </div>
-    </dl>
-  </div>
+  </RouterLink>
 </template>
 <style scoped>
 .card {
