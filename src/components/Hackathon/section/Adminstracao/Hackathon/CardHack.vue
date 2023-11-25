@@ -23,7 +23,7 @@ const UrlHackathon = (id) => {
   <RouterLink :to="UrlHackathon(linkHackathon.id)">
     <div class="card">
       <div class="logo">
-        <img :src="image" />
+        <img alt="logo do hackathon" :src="image" />
       </div>
       <dl class="desc">
         <div>

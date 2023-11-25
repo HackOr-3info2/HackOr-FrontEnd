@@ -33,7 +33,7 @@ function showSlides(n) {
         :style="{ display: imageIndex === currentIndex ? 'block' : 'none' }"
       >
         <div class="numbertext">{{ currentIndex + 1 }} / {{ images.length }}</div>
-        <img :src="image.src" alt="Slide Image" />
+        <img :src="image.src" alt="Imagem do slide contendo alunos participando do hackathon" />
       </div>
       <a class="prev" @click="plusSlides(-1)">
         <box-icon color="var(--white)" type="solid" name="chevron-left"></box-icon>
