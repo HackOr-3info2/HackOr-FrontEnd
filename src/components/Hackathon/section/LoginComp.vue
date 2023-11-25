@@ -2,7 +2,6 @@
 import { reactive } from 'vue'
 import { useAuthStore } from '@/stores/auth'
 import { useRouter } from 'vue-router'
-import ButtonPrimary from '../../GVC/Buttons/ButtonPrimary.vue'
 
 const data = reactive({
   showPassword: false,
@@ -71,21 +70,8 @@ async function submit() {
         </label>
         <span>Lembrar de mim</span>
       </div>
-      <button  @submit.prevent="submit" @keypress="enter" type="submit">entrar</button>
+      <button @submit.prevent="submit" @keypress="enter" type="submit">entrar</button>
     </form>
-    <div class="accounts">
-      <hr />
-      <div class="content">
-        <box-icon size="2.1em" color="var(--black)" type="logo" name="gmail"></box-icon>
-        <box-icon size="2.1em" color="var(--black)" name="facebook" type="logo"></box-icon>
-        <box-icon size="2.1em" color="var(--black)" name="twitter" type="logo"></box-icon>
-        <box-icon size="2.1em" color="var(--black)" type="logo" name="instagram"></box-icon>
-      </div>
-      <div class="registrar">
-        <span>Não tem conta?</span>
-        <RouterLink to="/profile">Acesse aqui</RouterLink>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -93,7 +79,9 @@ async function submit() {
 .accounts {
   margin-top: 2em;
 }
-
+h1 {
+  margin-bottom: 1em  
+}
 .accounts hr {
   overflow: visible;
   padding: 0;
@@ -141,7 +129,7 @@ button {
   border: 3px solid var(--black);
   transition: color 0.2s;
   z-index: 1;
-    border-radius: var(--border-rds);
+  border-radius: var(--border-rds);
 
   cursor: pointer;
   background-color: #fff;
@@ -156,8 +144,7 @@ button:before {
   background: var(--bg-black);
   height: 150px;
   width: 200px;
-    border-radius: var(--border-rds);
-
+  border-radius: var(--border-rds);
 }
 
 button:hover {
@@ -263,6 +250,7 @@ input::placeholder {
   top: 0;
   left: 0;
   padding: 0.8em;
+  background-color: var(--gray);
   margin-left: 0.5em;
   pointer-events: none;
   transition: all 0.3s ease;
@@ -274,7 +262,7 @@ input::placeholder {
   margin: 0em;
   margin-left: 1.3em;
   padding: 0.4em;
-  background-color: var(--bg-light);
+  background-color: var(--gray);
 }
 .inputGroup .email:invalid:not(:placeholder-shown) ~ label {
   transform: translateY(-50%) scale(0.9);

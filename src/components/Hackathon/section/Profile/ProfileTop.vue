@@ -11,7 +11,7 @@ defineProps ({
             <img :src="image" class="icon-profile" alt="imagem de perfil"/>
             <div class="name_user">
                 <h3>{{ nome }}</h3>
-                <h4 class="low_op">{{ user }}</h4>
+                <h4 class="low_op">@{{ user }}</h4>
             </div>
         </div>  
     </section>
@@ -37,7 +37,6 @@ defineProps ({
     width: 11em;
     border-radius: 50%;
     margin-bottom: 1em;
-    outline: 4px solid var(--text-color-lg);
 }
 .nome-user {
     display: flex;

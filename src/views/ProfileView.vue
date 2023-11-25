@@ -33,6 +33,5 @@ section {
   z-index: -10;
   height: 25vh;
   background-color: #265e81;
-  border-bottom: 4px solid var(--text-color-lg);
 }
 </style>

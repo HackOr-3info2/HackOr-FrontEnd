@@ -37,7 +37,7 @@
 <script setup>
 import CarouselComp from '../components/Hackathon/section/Adminstracao/Equipes/CarouselComp.vue'
 import EquipesComp from '../components/Hackathon/section/Adminstracao/Hackathon/EquipesComp.vue'
-import AvaliacoesComp from '../components/Hackathon/section/Adminstracao/Hackathon/AvaliacoesComp.vue'
+import AvaliacoesComp from '../components/Hackathon/section/Adminstracao/Hackathon/HackathonDetalhe/AvaliacoesComp.vue'
 const carouselImages = [
   {
     src: 'https://araquari.ifc.edu.br/wp-content/blogs.dir/4/files/sites/4/2023/02/IMG_0624.jpeg'
