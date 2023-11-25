@@ -16,12 +16,10 @@ a:hover {
   text-decoration: none;
 }
 .login-content {
+  background-color: var(--gray);
   border-radius: var(--border-rds);
   height: 60vh;
   width: 30em;
-}
-.login-content {
-  background-color: var(--gray);
   box-shadow: var(--box-shadow);
   padding: 1.5em 3em;
   display: flex;
@@ -40,5 +38,16 @@ section {
   position: absolute;
   top: 1%;
   left: 1%;
+}
+@media only screen and (max-width: 500px) {
+  .login-content {
+    width: 25em;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .login-content {
+    padding: 1em;
+    width: 15em;
+  }
 }
 </style>
