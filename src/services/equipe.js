@@ -1,6 +1,6 @@
 import api from "../plugins/api";
 export default class EquipeApi {
-  async buscarTodosAsEquipes() {
+  async buscarTodasAsEquipes() {
     const { data } = await api.get('/api/equipe/');
     console.log(data);
     return data.results;
