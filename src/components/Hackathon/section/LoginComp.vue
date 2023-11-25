@@ -1,29 +1,24 @@
 <script setup>
 import { reactive } from 'vue'
-import { useAuthStore } from '@/stores/auth'
+import { useAuthStore } from '../../../stores/auth'
 import { useRouter } from 'vue-router'
 
-const data = reactive({
-  showPassword: false,
-  isEmailInvalid: false
-})
-
-const togglePasswordVisibility = () => {
-  data.showPassword = !data.showPassword
-}
-
-const authStore = useAuthStore()
 const router = useRouter()
+const authStore = useAuthStore()
 
 const user = reactive({
   email: '',
   password: ''
 })
 
+// function login() {
+//   authStore.login({ ...user })
+// }
+
 async function submit() {
   try {
     await authStore.login(user)
-    router.push('/profile')
+    router.push('/hackathon')
   } catch (error) {
     console.error(error)
   }
@@ -51,15 +46,11 @@ async function submit() {
             autocomplete="off"
             required=""
             v-model="user.password"
-            :type="data.showPassword ? 'text' : 'password'"
+            type="password"
+
           />
           <label for="name">Senha</label>
-          <div class="icone" @click="togglePasswordVisibility">
-            <box-icon
-              :name="data.showPassword ? 'lock-open' : 'lock'"
-              color="var(--black)"
-            ></box-icon>
-          </div>
+          
         </div>
       </div>
       <div class="lembrar">
@@ -69,12 +60,15 @@ async function submit() {
         </label>
         <span>Lembrar de mim</span>
       </div>
-      <button @submit.prevent="submit" @keypress="enter" type="submit">entrar</button>
+      <button type="submit">entrar</button>
     </form>
   </div>
 </template>
 
 <style scoped>
+.login-content{
+  outline: 4px solid var(--bg-black);
+}
 .registrar {
   display: flex;
   justify-content: center;
