@@ -4,10 +4,11 @@
     --text-color-lg: #363636;
     --text-color-dk: #f2f2f2;
     --bg-dark: #222;
-    --gray: #E4E3ED;
+    --gray: #f9f9f9;
     --border-rds: .5em;
     --white: #ffffff;
     --black: #363636;
     --bg-black: #363636;
     --bg-light: #ffffff;
+    --box-shadow: 2px 2px 20px rgba(0, 0, 0, .062)
 }   

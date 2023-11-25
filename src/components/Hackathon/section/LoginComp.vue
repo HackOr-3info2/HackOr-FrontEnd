@@ -2,7 +2,6 @@
 import { reactive } from 'vue'
 import { useAuthStore } from '@/stores/auth'
 import { useRouter } from 'vue-router'
-import ButtonPrimary from '../../GVC/Buttons/ButtonPrimary.vue'
 
 const data = reactive({
   showPassword: false,
@@ -33,7 +32,6 @@ async function submit() {
 
 <template>
   <div class="login-content">
-    <h1>logo</h1>
     <h2>Entre na sua conta</h2>
     <form @submit.prevent="submit">
       <div class="all-inputs">
@@ -71,38 +69,12 @@ async function submit() {
         </label>
         <span>Lembrar de mim</span>
       </div>
-      <button  @submit.prevent="submit" @keypress="enter" type="submit">entrar</button>
+      <button @submit.prevent="submit" @keypress="enter" type="submit">entrar</button>
     </form>
-    <div class="accounts">
-      <hr />
-      <div class="content">
-        <box-icon size="2.1em" color="var(--black)" type="logo" name="gmail"></box-icon>
-        <box-icon size="2.1em" color="var(--black)" name="facebook" type="logo"></box-icon>
-        <box-icon size="2.1em" color="var(--black)" name="twitter" type="logo"></box-icon>
-        <box-icon size="2.1em" color="var(--black)" type="logo" name="instagram"></box-icon>
-      </div>
-      <div class="registrar">
-        <span>Não tem conta?</span>
-        <RouterLink to="/profile">Acesse aqui</RouterLink>
-      </div>
-    </div>
   </div>
 </template>
 
 <style scoped>
-.accounts {
-  margin-top: 2em;
-}
-
-.accounts hr {
-  overflow: visible;
-  padding: 0;
-  margin-bottom: 0.5em;
-  border: none;
-  border-top: medium solid var(--black);
-  color: var(--text-color-lg);
-  text-align: center;
-}
 .registrar {
   display: flex;
   justify-content: center;
@@ -138,11 +110,9 @@ button {
   padding: 0.7em 2em;
   position: relative;
   overflow: hidden;
-  border: 3px solid var(--black);
   transition: color 0.2s;
   z-index: 1;
-    border-radius: var(--border-rds);
-
+  border-radius: var(--border-rds);
   cursor: pointer;
   background-color: #fff;
   font-weight: 500;
@@ -156,8 +126,7 @@ button:before {
   background: var(--bg-black);
   height: 150px;
   width: 200px;
-    border-radius: var(--border-rds);
-
+  border-radius: var(--border-rds);
 }
 
 button:hover {

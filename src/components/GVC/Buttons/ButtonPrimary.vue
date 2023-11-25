@@ -35,7 +35,7 @@ button:before {
   background: var(--bg-black);
   height: 150px;
   width: 200px;
-  border-radius: var(--border-rds);
+  border-radius: 50%;
 }
 
 button:hover {
