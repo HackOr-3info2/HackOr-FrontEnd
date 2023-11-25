@@ -13,13 +13,34 @@ import NavComp from '../components/Hackathon/section/Adminstracao/Temas/NavComp.
           nomeHackathon="Queremos ajuda do Eduardo"
           tema="Gereniador de Hackathons"
           turma="3INFO"
+          quantidade="10"
+          edicao="2023"
+          avaliacao="10/10"
+        />
+      </RouterLink>
+      <RouterLink to="/equipe/id">
+        <CardEquipe
+          nomeHackathon="Queremos ajuda do Eduardo"
+          tema="Gereniador de Hackathons"
+          turma="3INFO"
+          edicao="2023"
+          quantidade="10"
+          avaliacao="10/10"
+        />
+      </RouterLink>
+      <RouterLink to="/equipe/id">
+        <CardEquipe
+          nomeHackathon="Queremos ajuda do Eduardo"
+          tema="Gereniador de Hackathons"
+          turma="3INFO"
+          quantidade="10"
           edicao="2023"
           avaliacao="10/10"
         />
       </RouterLink>
     </div>
     <button>
-      <span> Ver equipes de hackathons anterior </span>
+      <span> Ver mais temas </span>
       <box-icon name="chevron-down" color="#383838" size="1.5em" type="solid"></box-icon>
     </button>
   </main>

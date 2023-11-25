@@ -1,6 +1,7 @@
 <script setup>
 import ProfileTop from '../components/Hackathon/section/Profile/ProfileTop.vue'
 import PerfilDetalhes from '../components/Hackathon/section/Profile/PerfilDetalhes.vue'
+import AvaliacoesSection from '../components/Hackathon/section/Profile/AvaliacoesSection.vue'
 </script>
 
 <template>
@@ -13,12 +14,16 @@ import PerfilDetalhes from '../components/Hackathon/section/Profile/PerfilDetalh
       descricao="Hands-on with cloud computing, devops tools, full-stack, programming concepts and open source/leading frameworks."
     />
     <PerfilDetalhes />
+    <AvaliacoesSection />
   </main>
 </template>
 
-<style scoped>
+<style scoped>  
 main {
   padding: 10vh 25em 0 25em;
+}
+section {
+  margin: 2.5em 0
 }
 .header {
   position: absolute;

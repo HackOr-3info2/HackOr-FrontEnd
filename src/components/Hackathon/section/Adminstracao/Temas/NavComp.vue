@@ -21,31 +21,13 @@
       <section id="modal-content" :class="[{ hide: modalHidden }]">
         <div>
           <div class="header">
-            <h3>Adicionar novas equipes</h3>
+            <h3>Adicionar novos temas</h3>
             <ButtonIcon nameIcon="x" @click="toggleModal" />
           </div>
           <form>
             <div class="inputGroup">
               <input autocomplete="off" required="" type="text" />
-              <label for="name">Nome</label>
-            </div>
-            <div class="inputGroup">
-              <select id="temaSelect" v-model="selectedThemes" multiple="multiple">
-                <option value="aaa">aa</option>
-                <option value="bbb">bb</option>
-                <option value="ccc">cc</option>
-                <option value="ddd">dd</option>
-              </select>
-              <label for="name">Equipe</label>
-            </div>
-            <div class="inputGroup">
-              <select id="temaSelect" v-model="selectedThemes">
-                <option value="aaa">aa</option>
-                <option value="bbb">bb</option>
-                <option value="ccc">cc</option>
-                <option value="ddd">dd</option>
-              </select>
-              <label label for="name"> Tema</label>
+              <label for="name">Descrição</label>
             </div>
             <div class="inputGroup">
               <select id="temaSelect" v-model="selectedThemes">
@@ -70,35 +52,13 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 
 import ButtonIcon from '../../../../GVC/Buttons/ButtonIcon.vue'
 import ButtonSecondary from '../../../../GVC/Buttons/ButtonSecondary.vue'
 const modalHidden = ref(true)
 const toggleModal = () => {
   modalHidden.value = !modalHidden.value
-}
-
-const selectedThemes = ref([])
-
-onMounted(() => {
-  if (window.jQuery) {
-    setupSelect2()
-  } else {
-    console.error('jQuery is not available. Make sure it is included before this component.')
-  }
-})
-
-function setupSelect2() {
-  const temaSelect = ref(null)
-
-  temaSelect.value = $('#temaSelect')
-
-  temaSelect.value.select2({
-    placeholder: '',
-    allowClear: true,
-    tags: true
-  })
 }
 </script>
 
@@ -152,11 +112,11 @@ form button {
   transform: translate(-50%, -50%);
   padding: 2em;
   overflow-y: hidden;
-  height: 65vh;
+  height: 50vh;
   display: flex;
   gap: 1em;
   flex-direction: column;
-  width: 50%;
+  width: 35%;
   background-color: white;
   border-radius: 30px;
   z-index: 100;

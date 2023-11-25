@@ -1,5 +1,4 @@
 <script setup>
-import CardDetalhes from './CardDetalhe.vue'
 </script>
 <template>
   <section>
@@ -23,10 +22,7 @@ import CardDetalhes from './CardDetalhe.vue'
   </section>
 </template>
 <style scoped>
-section {
-  margin-top: 3em;
-  border-radius: var(--border-rds);
-}
+
 dd {
   font-weight: 600;
   font-size: 1.2em;

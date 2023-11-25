@@ -5,7 +5,8 @@ defineProps({
   edicao: Number,
   avaliacao: String,
   turma: String,
-  image: String
+  image: String,
+  quantidade: Number
 })
 </script>
 <template>
@@ -13,7 +14,6 @@ defineProps({
     <dl class="desc">
       <div>
         <dd class="title">{{ nomeHackathon }}</dd>
-        <dt>{{ tema }}</dt>
       </div>
       <div>
         <dd>Edição</dd>
@@ -24,8 +24,8 @@ defineProps({
         <dt>{{ turma }}</dt>
       </div>
       <div>
-        <dd>Avaliação</dd>
-        <dt>{{ avaliacao }}</dt>
+        <dd>Quantidade</dd>
+        <dt>{{ quantidade }}</dt>
       </div>
     </dl>
   </div>
@@ -56,7 +56,7 @@ defineProps({
 
 
 .desc {
-  margin: 0 5em 0 8em;
+  margin: 0 2em;
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -23,14 +23,12 @@ defineProps ({
 .icon-profile {
     width: 11em;
     border-radius: 50%;
+    margin-bottom: 1em;
 }
 .nome-user {
     display: flex;
     align-items: center;
     gap: 1em
     
-}
-.content {
-margin-top: 1em
-}
+}   
 </style>

@@ -4,11 +4,15 @@ defineProps({
   tema: String,
   edicao: Number,
   avaliacao: String,
-  turma: String
+  turma: String,
+  image: String
 })
 </script>
 <template>
   <div class="card">
+    <div class="logo">
+      <img :src="image" />
+    </div>
     <dl class="desc">
       <div>
         <dd class="title">{{ nomeHackathon }}</dd>
@@ -69,7 +73,7 @@ defineProps({
 }
 
 .desc {
-  margin: 0 2em;
+  margin: 0 5em 0 8em;
   display: flex;
   align-items: center;
   justify-content: space-between;
