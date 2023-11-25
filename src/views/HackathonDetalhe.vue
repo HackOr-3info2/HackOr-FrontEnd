@@ -37,7 +37,7 @@
 <script setup>
 import CarouselComp from '../components/Hackathon/section/Adminstracao/Equipes/CarouselComp.vue'
 import EquipesComp from '../components/Hackathon/section/Adminstracao/Hackathon/EquipesComp.vue'
-import AvaliacoesComp from '../components/Hackathon/section/Adminstracao/Hackathon/AvaliacoesComp.vue'
+import AvaliacoesComp from '../components/Hackathon/section/Adminstracao/Hackathon/HackathonDetalhe/AvaliacoesComp.vue'
 const carouselImages = [
   {
     src: 'https://araquari.ifc.edu.br/wp-content/blogs.dir/4/files/sites/4/2023/02/IMG_0624.jpeg'
@@ -61,6 +61,8 @@ main {
   background: url(https://noticias.memoria.araquari.ifc.edu.br/wp-content/uploads/sites/11/2022/07/IMG_0638.jpeg)
     no-repeat;
   background-size: cover;
+  filter: brightness(0.5);
+  border-bottom: 5px solid;
   background-position: center;
 }
 section {

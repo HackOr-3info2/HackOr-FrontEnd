@@ -26,7 +26,7 @@ import NavComp from '../components/Hackathon/section/Adminstracao/Hackathon/NavC
           inicio="22/06/2023"
           fim="22/06/2023"
           status="Concluído"
-          avaliacao="10/10" 
+          avaliacao="10/10"
         />
       </RouterLink>
       <RouterLink to="/hackathon/id">
@@ -37,7 +37,7 @@ import NavComp from '../components/Hackathon/section/Adminstracao/Hackathon/NavC
           inicio="22/06/2023"
           fim="22/06/2023"
           status="Concluído"
-          avaliacao="10/10" 
+          avaliacao="10/10"
         />
       </RouterLink>
     </div>
@@ -57,15 +57,15 @@ main {
 }
 
 .bem-vindo * {
-  color: var(--white);
+  color: var(--black);
 }
 .bem-vindo h3 {
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 .bem-vindo {
-  background-color: var(--black);
   border-radius: var(--border-rds);
   padding: 2em 16em 2em 2em;
+  border: 5px solid #6f36f7;
   margin-bottom: 5em;
   display: flex;
 }

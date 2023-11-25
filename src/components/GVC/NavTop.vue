@@ -1,73 +1,29 @@
 <script setup>
-import InputButtonBorder from './input/pesquisa/InputButtonBorder.vue'
+import ButtonPrimaryNo from './Buttons/ButtonPrimaryNo.vue';
 </script>
 
 <template>
   <nav id="navbar" class="animate__animated animate__fadeInDown" ref="navbar">
     <div>
       <a href="/" exact>
-        <h1>Template</h1>
+        <h1>Hack.or</h1>
       </a>
     </div>
-    <div>
-      <input type="checkbox" id="click" />
-      <label for="click" class="menu-btn">
-        <i class="fas fa-bars"></i>
-      </label>
-      <div class="nav-links">
-        <ul class="links">
-          <li>
-            <a href="">link 1</a>
-          </li>
-          <li>
-            <a href="">link 1</a>
-          </li>
-          <li>
-            <a href="">link 1</a>
-          </li>
-        </ul>
-        <ul class="redes-sociais mobile">
-          <li>
-            <a href="#"
-              ><box-icon size="2em" color="#fff" type="logo" name="facebook-square"></box-icon
-            ></a>
-          </li>
-          <li>
-            <a href="#"><box-icon size="2em" color="#fff" name="twitter" type="logo"></box-icon></a>
-          </li>
-          <li>
-            <a href="#"
-              ><box-icon size="2em" color="#fff" name="instagram" type="logo"></box-icon
-            ></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <ul class="redes-sociais">
-      <li>
-        <a href="#"
-          ><box-icon size="2em" color="#fff" type="logo" name="facebook-square"></box-icon
-        ></a>
-      </li>
-      <li>
-        <a href="#"><box-icon size="2em" color="#fff" name="twitter" type="logo"></box-icon></a>
-      </li>
-      <li>
-        <a href="#"><box-icon size="2em" color="#fff" name="instagram" type="logo"></box-icon></a>
-      </li>
-    <InputButtonBorder />
-    </ul>
+    <RouterLink to="/login">
+      <ButtonPrimaryNo text="Login" />
+    </RouterLink>
   </nav>
 </template>
 
 <style scoped>
 nav {
-  background-color: var(--black);
+  background-color: transparent;
   height: 73px;
-  padding: 40px 145px;
+  padding: 4em 9em;
   width: -webkit-fill-available;
   width: -moz-available;
   justify-content: space-between;
+  position: fixed;
   display: flex;
   z-index: 99;
   align-items: center;

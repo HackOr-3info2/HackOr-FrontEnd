@@ -59,6 +59,7 @@ nav {
   margin-right: auto;
   background-color: var(--bg-black);
   display: flex;
+  z-index: 100;
   flex-direction: column;
   justify-content: space-between;
   padding: 0.75rem;
