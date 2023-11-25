@@ -3,15 +3,15 @@
   <nav>
     <ul>
       <li>
-        <a href="#">
+        <RouterLink to="/hackathon">
           <box-icon
             name="circle-three-quarter"
             color="var(--gray)"
             size="2em"
             type="solid"
           ></box-icon>
-          <span>Dashboard</span>
-        </a>
+          <span>Hackathon</span>
+        </RouterLink>
       </li>
       <li>
         <a href="#">

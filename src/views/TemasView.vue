@@ -7,27 +7,7 @@ import NavComp from '../components/Hackathon/section/Adminstracao/Temas/NavComp.
   <main>
     <h2>Temas</h2>
     <NavComp />
-    <div class="all-equipes">
-      <RouterLink to="/equipe/id">
-        <CardEquipe
-          nomeHackathon="Queremos ajuda do Eduardo"
-          tema="Gereniador de Hackathons"
-          turma="3INFO"
-          quantidade="10"
-          edicao="2023"
-          avaliacao="10/10"
-        />
-      </RouterLink>
-      <RouterLink to="/equipe/id">
-        <CardEquipe
-          nomeHackathon="Queremos ajuda do Eduardo"
-          tema="Gereniador de Hackathons"
-          turma="3INFO"
-          edicao="2023"
-          quantidade="10"
-          avaliacao="10/10"
-        />
-      </RouterLink>
+    <div class="all-temas">
       <RouterLink to="/equipe/id">
         <CardEquipe
           nomeHackathon="Queremos ajuda do Eduardo"
@@ -72,7 +52,7 @@ button span {
 h2 {
   margin-bottom: 1em;
 }
-.all-equipes {
+.all-temas {
   display: flex;
   flex-direction: column;
   gap: 1em;

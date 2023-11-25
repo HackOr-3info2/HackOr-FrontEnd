@@ -13,7 +13,7 @@ body.light-mode {
   transition: 0s;
   background-color: var(--bg-light);
 }
-dt, dd {
+dt, dd, span {
   color: var(--black);
 }
 body.dark-mode {

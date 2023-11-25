@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import AuthView from '@/views/AuthView.vue'
+import HackathonView from '@/views/HackathonView.vue'
+import HackathonDetalhe from '@/views/HackathonDetalhe.vue'
 import ProfileView from '@/views/ProfileView.vue'
 import EquipesView from '@/views/EquipesView.vue'
 import TemasView from '@/views/TemasView.vue'
@@ -10,7 +12,7 @@ import SettingsView from '@/views/SettingsView.vue'
 import CrudView from '@/views/CrudView.vue'
 import FullView from '../layouts/FullView.vue'
 /* import BlankView from '../layouts/BlankView.vue'
- */import NoneView from '../layouts/NoneView.vue'
+ */ import NoneView from '../layouts/NoneView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -40,6 +42,16 @@ const router = createRouter({
           component: CrudView
         },
         {
+          path: '/hackathon',
+          name: 'hackathon',
+          component: HackathonView
+        },
+        {
+          path: '/hackathon/id',
+          component: HackathonDetalhe
+        },
+
+        {
           path: '/equipes',
           name: 'equipes',
           component: EquipesView
@@ -56,7 +68,7 @@ const router = createRouter({
         {
           path: '/tema/id',
           component: TemaView
-        },
+        }
       ]
     },
     {
