@@ -13,4 +13,8 @@ export default class HackathonApi {
     const { data } = await api.put(`/api/hackathon/${hackathon.id}/`, hackathon);
     return data;
   }
+  async buscarHackathonPorId(id) {
+    const { data } = await api.get(`/api/hackathon/${id}/`);
+    return data;
+  }
 }   

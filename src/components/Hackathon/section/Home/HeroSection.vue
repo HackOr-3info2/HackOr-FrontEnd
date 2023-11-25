@@ -9,10 +9,10 @@
       </p>
     </div>
     <div class="midia">
-      <box-icon color="var(--white)" size="2em" type='logo' name='facebook-square'></box-icon>
-      <box-icon color="var(--white)" size="2em" name='twitter' type='logo' ></box-icon>
-      <box-icon color="var(--white)" size="2em" name='github' type='logo' ></box-icon>
-      <box-icon color="var(--white)" size="2em" type='logo' name='linkedin-square'></box-icon>
+      <box-icon color="var(--white)" size="2em" type="logo" name="facebook-square"></box-icon>
+      <box-icon color="var(--white)" size="2em" name="twitter" type="logo"></box-icon>
+      <box-icon color="var(--white)" size="2em" name="github" type="logo"></box-icon>
+      <box-icon color="var(--white)" size="2em" type="logo" name="linkedin-square"></box-icon>
     </div>
   </section>
 </template>
@@ -80,55 +80,14 @@ p {
   margin: 7px 0;
 }
 @media only screen and (max-width: 768px) {
-  section div {
-    padding: 0 50px;
-  }
 }
 
 @media only screen and (max-width: 600px) {
-  section {
-    background-attachment: local;
-  }
-  section .effect {
-    position: relative;
-    transition: var(--effect) ease;
-  }
-  section .text {
-    position: relative;
-    z-index: 1;
-  }
-  section .effect::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 2px;
-    height: 18px;
-    width: 0;
-    background-color: var(--hero-section);
-    transition: var(--effect) ease;
-  }
-
-  section:hover .effect::before {
-    width: 100%;
-  }
-  p {
-    color: var(--white);
-    margin: 7px 0;
-  }
 }
 
 @media only screen and (max-width: 600px) {
-  p {
-    width: auto;
-  }
-  section div {
-    padding: 0 15px;
-  }
 }
 @media only screen and (max-width: 425px) {
-  section div {
-    padding: 0 10px;
-  }
 }
 @media only screen and (min-width: 768px) {
 }
@@ -136,6 +95,32 @@ p {
 @media only screen and (min-width: 992px) {
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 1024px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  p {
+    font-size: 1.2em;
+  }
+}
+@media only screen and (max-width: 888px) {
+  h1 {
+    font-size: 2.2em;
+  }
+  p {
+    font-size: 1em;
+    width: fit-content;
+  }
+  section .content {
+    padding: 0 4em;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .midia {
+    flex-direction: row;
+  }
+  section .content {
+    padding: 0 1em;
+  }
 }
 </style>

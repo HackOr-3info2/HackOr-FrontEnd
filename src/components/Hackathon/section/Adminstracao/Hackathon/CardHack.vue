@@ -1,4 +1,5 @@
 <script setup>
+
 defineProps({
   nomeHackathon: String,
   tema: String,
@@ -12,6 +13,8 @@ defineProps({
     type: Object
   }
 })
+
+
 const UrlHackathon = (id) => {
   return `/hackathon/${id}`
 }

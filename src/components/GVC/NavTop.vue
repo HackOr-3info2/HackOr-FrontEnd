@@ -174,6 +174,12 @@ h1 {
   }
 }
 
+@media only screen and (max-width: 888px) {
+  nav {
+    padding: 4em;
+  }
+}
+
 @media only screen and (max-width: 768px) {
 }
 

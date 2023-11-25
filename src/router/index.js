@@ -47,7 +47,7 @@ const router = createRouter({
           component: HackathonView
         },
         {
-          path: '/hackathon/id',
+          path: '/hackathon/:id',
           component: HackathonDetalhe
         },
 

@@ -9,7 +9,6 @@ const hackathons = ref([])
 
 onMounted(async () => {
   hackathons.value = await hackathonApi.buscarTodosOsHackathons()
-  
 })
 </script>
 
@@ -29,14 +28,12 @@ onMounted(async () => {
     <h3></h3>
     <div class="all-equipes">
       <CardHack
-        v-for="hackathon in hackathons"
-        :key="hackathon.id"
-        :tema="hackathon.tema"
-        :status="hackathon.estado"
-        :inicio="hackathon.data_inicio"
-        :fim="hackathon.data_final"
-        :linkHackathon="hackathon"
-        :descricao="hackathon.descricao"
+        tema="Gerenciador de Hackathons"
+        status="concluído"
+        inicio="20/05"
+        fim="20/06"
+        linkHackathon="hackathon"
+        descricao="hackathon.descricao"
       />
     </div>
     <button>
@@ -63,7 +60,7 @@ main {
 .bem-vindo {
   border-radius: var(--border-rds);
   padding: 2em 16em 2em 2em;
-  border: 5px solid #6f36f7;
+  box-shadow: var(--box-shadow);
   margin-bottom: 5em;
   display: flex;
 }

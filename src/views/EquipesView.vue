@@ -12,7 +12,7 @@ import NavComp from '../components/Hackathon/section/Adminstracao/Equipes/NavCom
         <CardEquipe
           image="https://upload.wikimedia.org/wikipedia/commons/d/db/IFC_2014_logo.svg"
           nomeHackathon="Queremos ajuda do Eduardo"
-          tema="Gereniador de Hackathons"
+          tema="Gerenciador de Hackathons"
           turma="3INFO"
           edicao="2023"
           avaliacao="10/10"
