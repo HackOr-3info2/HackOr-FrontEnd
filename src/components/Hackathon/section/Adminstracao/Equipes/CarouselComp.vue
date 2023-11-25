@@ -58,6 +58,7 @@ function showSlides(n) {
 <style scoped>
 img {
   width: 100%;
+
   border-radius: var(--border-rds);
 }
 .slideshow-container {
