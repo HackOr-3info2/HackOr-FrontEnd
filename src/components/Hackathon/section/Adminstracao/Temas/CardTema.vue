@@ -1,31 +1,13 @@
 <script setup>
 defineProps({
-  nomeHackathon: String,
-  tema: String,
-  edicao: Number,
-  avaliacao: String,
-  turma: String,
-  image: String,
-  quantidade: Number
+  descricao: String,
 })
 </script>
 <template>
   <div class="card">
     <dl class="desc">
       <div>
-        <dd class="title">{{ nomeHackathon }}</dd>
-      </div>
-      <div>
-        <dd>Edição</dd>
-        <dt>{{ edicao }}</dt>
-      </div>
-      <div>
-        <dd>Turmas</dd>
-        <dt>{{ turma }}</dt>
-      </div>
-      <div>
-        <dd>Quantidade</dd>
-        <dt>{{ quantidade }}</dt>
+        <dd class="title">{{ descricao }}</dd>
       </div>
     </dl>
   </div>

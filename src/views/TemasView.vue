@@ -1,6 +1,16 @@
 <script setup>
-import CardEquipe from '../components/Hackathon/section/Adminstracao/Temas/CardTema.vue'
+import {ref, onMounted} from 'vue';
+import CardTema from '../components/Hackathon/section/Adminstracao/Temas/CardTema.vue'
 import NavComp from '../components/Hackathon/section/Adminstracao/Temas/NavComp.vue'
+import TemasApi from "../services/temas";
+
+const temasApi = new TemasApi();
+const temas = ref([]);
+
+onMounted(async() => {
+  temas.value = await temasApi.buscarTodosOsTemas()
+})
+
 </script>
 
 <template>
@@ -8,16 +18,7 @@ import NavComp from '../components/Hackathon/section/Adminstracao/Temas/NavComp.
     <h2>Temas</h2>
     <NavComp />
     <div class="all-temas">
-      <RouterLink to="/equipe/id">
-        <CardEquipe
-          nomeHackathon="Queremos ajuda do Eduardo"
-          tema="Gereniador de Hackathons"
-          turma="3INFO"
-          quantidade="10"
-          edicao="2023"
-          avaliacao="10/10"
-        />
-      </RouterLink>
+      <CardTema v-for="tema in temas" :key="tema.id" descricao="tema.Descricao" />
     </div>
     <button>
       <span> Ver mais temas </span>
