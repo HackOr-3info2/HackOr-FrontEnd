@@ -71,17 +71,6 @@ const router = createRouter({
         }
       ]
     },
-    {
-      path: '/login',
-      component: NoneView,
-      children: [
-        {
-          path: '/Login',
-          name: 'Login',
-          component: AuthView
-        }
-      ]
-    }
   ]
 })
 
